@@ -1,0 +1,11 @@
+.projects {
+    justify-content: flex-start;
+    width: 80%;
+}
+
+@media (max-width: 600px) {
+    .projects {
+        justify-content: center;
+        width: 100%;
+    }
+}
