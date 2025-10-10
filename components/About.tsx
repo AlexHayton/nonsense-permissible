@@ -1,29 +1,29 @@
-import { Lightbulb, Smartphone, Video, Zap } from "lucide-react";
+import { Lightbulb, Smartphone, Video, Zap } from 'lucide-react';
 
 export default function About() {
   const features = [
     {
       icon: Lightbulb,
-      title: "Creative Vision",
+      title: 'Creative Vision',
       description:
-        "Transforming imaginative ideas into tangible interactive experiences.",
+        'Transforming imaginative ideas into tangible interactive experiences.',
     },
     {
       icon: Smartphone,
-      title: "Mobile-First",
-      description: "Optimized for iOS and Android with seamless performance.",
+      title: 'Mobile-First',
+      description: 'Optimized for iOS and Android with seamless performance.',
     },
     {
       icon: Video,
-      title: "Video and WebRTC",
+      title: 'Video and WebRTC',
       description:
-        "Years of expertise in video and WebRTC. Make your app more engaging with videos and WebRTC.",
+        'Years of expertise in video and WebRTC. Make your app more engaging with videos and WebRTC.',
     },
     {
       icon: Zap,
-      title: "Engaging Gameplay",
+      title: 'Engaging Gameplay',
       description:
-        "Intuitive mechanics that keep players coming back for more.",
+        'Intuitive mechanics that keep players coming back for more.',
     },
   ];
 

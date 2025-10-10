@@ -1,61 +1,76 @@
-**Add your own guidelines here**
-<!--
+# CLAUDE.md
 
-System Guidelines
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+## Project Overview
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+Next.js 14 portfolio website deployed to Netlify. Built with TypeScript, React, and Tailwind CSS. The site is a single-page application with section-based navigation.
 
-# General guidelines
+## Development Commands
 
-Any general rules you want the AI to follow.
-For example:
+```bash
+# Development server (runs on http://localhost:3000)
+yarn dev
 
-* Only use absolute positioning when necessary. Opt for responsive and well structured layouts that use flexbox and grid by default
-* Refactor code as you go to keep code clean
-* Keep file sizes small and put helper functions and components in their own files.
+# Build for production
+yarn build
 
---------------
+# Start production server
+yarn start
 
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
+# Build and export static site
+yarn export
 
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
+# Format code with Prettier
+yarn format
 
-* Use a base font-size of 14px
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
+# Check code formatting
+yarn format:check
+```
 
-You can also create sub sections and add more specific details
-For example:
+## Architecture
 
+### Component Structure
 
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
+- **pages/index.tsx**: Main application entry point that composes all sections
+- **pages/\_app.tsx**: Minimal Next.js app wrapper with no global state
+- **components/**: Top-level section components (Navigation, Hero, About, FeaturedWork, Contact, Footer)
+- **components/ui/**: Radix UI component library with shadcn/ui patterns
+- **components/figma/**: Custom components for Figma integration
 
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
+### Styling System
 
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
--->
+Uses Tailwind CSS with custom design tokens defined in `pages/globals.css`:
+
+- CSS custom properties for colors, spacing, and typography
+- Dark mode support via `.dark` class
+- Design tokens prefixed with `--` (e.g., `--primary`, `--radius`)
+- Base typography styles for semantic HTML elements
+
+UI components use `cn()` utility (from `components/ui/utils.ts`) to merge Tailwind classes with class-variance-authority (cva) for variant-based styling.
+
+### Path Aliases
+
+TypeScript paths configured in `tsconfig.json`:
+
+- `@components/*` → `./components/*`
+- `@styles/*` → `./styles/*`
+
+### Deployment
+
+Configured for Netlify with `@netlify/plugin-nextjs`:
+
+- Build command: `npm run build`
+- Publish directory: `.next`
+- Configuration in `netlify.toml`
+
+## Code Formatting
+
+Project uses Prettier for consistent code formatting:
+
+- `yarn format` - Format all files
+- `yarn format:check` - Check if files are properly formatted
+
+## Package Manager
+
+Project uses Yarn 1.22.22 (specified in `package.json`). Use `yarn` instead of `npm`.

@@ -18,7 +18,9 @@ export default function Contact() {
                 Let's create something extraordinary together.
               </h2>
               <p className="text-xl text-white/70">
-                Have a project in mind? We'd love to hear about it. Whether it's a whimsical toy app or an engaging 3D game, let's make it happen.
+                Have a project in mind? We'd love to hear about it. Whether it's
+                a whimsical toy app or an engaging 3D game, let's make it
+                happen.
               </p>
             </div>
 
@@ -33,7 +35,7 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-4 pt-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social => (
                 <a
                   key={social.label}
                   href={social.href}

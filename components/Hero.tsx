@@ -1,16 +1,16 @@
-import { ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { useCallback } from "react";
+import { ArrowRight } from 'lucide-react';
+import { Button } from './ui/button';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useCallback } from 'react';
 
 export default function Hero() {
   const navigateToAbout = useCallback(() => {
-    window.location.href = "#about";
+    window.location.href = '#about';
   }, []);
   const navigateToWork = useCallback(() => {
-    window.location.href = "#work";
+    window.location.href = '#work';
   }, []);
-  
+
   return (
     <section className="pt-32 pb-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

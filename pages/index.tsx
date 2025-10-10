@@ -1,9 +1,9 @@
-import Navigation from "../components/Navigation";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import FeaturedWork from "../components/FeaturedWork";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import Navigation from '../components/Navigation';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import FeaturedWork from '../components/FeaturedWork';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default function App() {
   return (

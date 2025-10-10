@@ -1,7 +1,7 @@
-import { Card } from "./ui/card";
-import { ArrowUpRight } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { useCallback } from "react";
+import { Card } from './ui/card';
+import { ArrowUpRight } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useCallback } from 'react';
 
 interface Project {
   title: string;
@@ -15,36 +15,36 @@ interface Project {
 export default function FeaturedWork() {
   const projects: Project[] = [
     {
-      title: "ValleyDAO Phlo",
-      category: "AI Agent Development",
+      title: 'ValleyDAO Phlo',
+      category: 'AI Agent Development',
       description:
-        "Connect with other researchers and founders in Climate Tech. Take a research idea, get funded, and turn it into a business.",
-      image: "/phlo/phlo.jpg",
-      link: "https://phlo.valleydao.bio",
+        'Connect with other researchers and founders in Climate Tech. Take a research idea, get funded, and turn it into a business.',
+      image: '/phlo/phlo.jpg',
+      link: 'https://phlo.valleydao.bio',
       featured: true,
     },
     {
-      title: "Quest Alarm Clock",
-      category: "XR utility app",
+      title: 'Quest Alarm Clock',
+      category: 'XR utility app',
       description:
-        "Always getting lost in your quest? Quest Alarm Clock is here to help.",
-      image: "/quest-alarm-clock/quest-alarm-clock.png",
-      link: "#",
+        'Always getting lost in your quest? Quest Alarm Clock is here to help.',
+      image: '/quest-alarm-clock/quest-alarm-clock.png',
+      link: '#',
       featured: false,
     },
     {
-      title: "Video Dice",
-      category: "Fun",
+      title: 'Video Dice',
+      category: 'Fun',
       description:
-        "Navigate through beautifully crafted 3D puzzle environments.",
-      image: "/video-dice/square.png",
-      link: "#",
+        'Navigate through beautifully crafted 3D puzzle environments.',
+      image: '/video-dice/square.png',
+      link: '#',
       featured: false,
     },
   ];
 
   const navigateToProject = useCallback((project: Project) => {
-    window.open(project.link, "_blank");
+    window.open(project.link, '_blank');
   }, []);
 
   return (
@@ -64,12 +64,12 @@ export default function FeaturedWork() {
             <Card
               key={index}
               className={`group overflow-hidden border-2 border-black hover:shadow-xl transition-all duration-300 ${
-                project.featured && index === 0 ? "lg:col-span-2" : ""
+                project.featured && index === 0 ? 'lg:col-span-2' : ''
               }`}
             >
               <div
                 className={`relative overflow-hidden ${
-                  project.featured ? "aspect-[21/9]" : "aspect-[4/3]"
+                  project.featured ? 'aspect-[21/9]' : 'aspect-[4/3]'
                 }`}
               >
                 <ImageWithFallback
