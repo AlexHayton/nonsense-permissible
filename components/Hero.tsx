@@ -1,8 +1,16 @@
-import { ArrowRight } from 'lucide-react';
-import { Button } from './ui/button';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useCallback } from "react";
 
 export default function Hero() {
+  const navigateToAbout = useCallback(() => {
+    window.location.href = "#about";
+  }, []);
+  const navigateToWork = useCallback(() => {
+    window.location.href = "#work";
+  }, []);
+  
   return (
     <section className="pt-32 pb-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -10,23 +18,38 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
+              <img
+                src="/nonsense.png"
+                alt="Nonsense Permissible"
+                className="w-40"
+              />
               <div className="inline-block px-4 py-2 bg-black text-white text-sm">
-                Mobile App Development
+                Video . 3D . AI . WebRTC . Mobile . Web
               </div>
               <h1 className="text-5xl lg:text-7xl tracking-tight">
-                Crafting 3D Toys & Games That Spark Joy
+                Crafting Experiences That Spark Joy
               </h1>
               <p className="text-xl text-black/70 max-w-xl">
-                We design and develop delightful mobile experiences that blend playful 3D artistry with engaging gameplay.
+                At Nonsense Permissible, we create web, mobile and XR
+                experiences that challenge conventions.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-black text-white hover:bg-black/80 gap-2">
+              <Button
+                size="lg"
+                className="bg-black text-white hover:bg-black/80 gap-2"
+                onClick={navigateToWork}
+              >
                 View Our Work
                 <ArrowRight size={20} />
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-black text-black hover:bg-black hover:text-white">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-black text-black hover:bg-black hover:text-white"
+                onClick={navigateToAbout}
+              >
                 Learn More
               </Button>
             </div>

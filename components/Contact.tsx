@@ -1,11 +1,10 @@
-import { Mail, Twitter, Dribbble, Github } from 'lucide-react';
+import { Mail, Twitter, Github } from 'lucide-react';
 import { Button } from './ui/button';
 
 export default function Contact() {
   const socialLinks = [
-    { icon: Twitter, label: 'Twitter', href: '#' },
-    { icon: Dribbble, label: 'Dribbble', href: '#' },
-    { icon: Github, label: 'Github', href: '#' },
+    { icon: Twitter, label: 'Twitter', href: 'https://x.com/papa__tiger' },
+    { icon: Github, label: 'Github', href: 'https://github.com/alexhayton' },
   ];
 
   return (
@@ -29,7 +28,7 @@ export default function Contact() {
                 className="bg-white text-black hover:bg-white/90 gap-2 w-full sm:w-auto"
               >
                 <Mail size={20} />
-                hello@nonsensepermissible.com
+                alex@nonsensepermissible.com
               </Button>
             </div>
 
@@ -48,7 +47,7 @@ export default function Contact() {
           </div>
 
           {/* Right Stats */}
-          <div className="grid grid-cols-2 gap-8">
+          {/* <div className="grid grid-cols-2 gap-8">
             <div className="space-y-2">
               <div className="text-5xl lg:text-7xl">50+</div>
               <div className="text-white/70">Apps Launched</div>
@@ -65,7 +64,7 @@ export default function Contact() {
               <div className="text-5xl lg:text-7xl">12</div>
               <div className="text-white/70">Awards Won</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

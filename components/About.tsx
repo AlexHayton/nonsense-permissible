@@ -1,26 +1,29 @@
-import { Lightbulb, Smartphone, Palette, Zap } from 'lucide-react';
+import { Lightbulb, Smartphone, Video, Zap } from "lucide-react";
 
 export default function About() {
   const features = [
     {
       icon: Lightbulb,
-      title: 'Creative Vision',
-      description: 'Transforming imaginative ideas into tangible interactive experiences.',
+      title: "Creative Vision",
+      description:
+        "Transforming imaginative ideas into tangible interactive experiences.",
     },
     {
       icon: Smartphone,
-      title: 'Mobile-First',
-      description: 'Optimized for iOS and Android with seamless performance.',
+      title: "Mobile-First",
+      description: "Optimized for iOS and Android with seamless performance.",
     },
     {
-      icon: Palette,
-      title: '3D Artistry',
-      description: 'Stunning three-dimensional visuals that captivate and engage.',
+      icon: Video,
+      title: "Video and WebRTC",
+      description:
+        "Years of expertise in video and WebRTC. Make your app more engaging with videos and WebRTC.",
     },
     {
       icon: Zap,
-      title: 'Engaging Gameplay',
-      description: 'Intuitive mechanics that keep players coming back for more.',
+      title: "Engaging Gameplay",
+      description:
+        "Intuitive mechanics that keep players coming back for more.",
     },
   ];
 
@@ -32,7 +35,12 @@ export default function About() {
             Making the impossible, permissible.
           </h2>
           <p className="text-xl text-white/70">
-            At Nonsense Permissible, we believe in breaking boundaries and creating mobile experiences that challenge conventions. Our small team specializes in crafting whimsical 3D toys and games that bring smiles to users worldwide.
+            At Nonsense Permissible, we believe in breaking boundaries and
+            creating experiences that challenge conventions.
+          </p>
+          <p className="text-xl text-white/70">
+            Our small team specializes in video and webRTC tech, 3D game
+            development and AI agent development.
           </p>
         </div>
 

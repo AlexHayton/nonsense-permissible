@@ -1,14 +1,16 @@
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import { Button } from './ui/button';
+import { Menu, X } from "lucide-react";
+import { useCallback, useState } from "react";
+import { Button } from "./ui/button";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigateToContact = useCallback(() => {
+    window.location.href = "#contact";
+  }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Work', href: '#work' },
-    { name: 'Contact', href: '#contact' },
+    { name: "About", href: "#about" },
+    { name: "Work", href: "#work" },
   ];
 
   return (
@@ -16,7 +18,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center">
-            <img src={"/nonsense.png"} alt="Nonsense Permissible" className="h-12 w-auto" />
+            <img
+              src={"/nonsense.png"}
+              alt="Nonsense Permissible"
+              className="h-12 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -30,7 +36,10 @@ export default function Navigation() {
                 {item.name}
               </a>
             ))}
-            <Button className="bg-black text-white hover:bg-black/80">
+            <Button
+              className="bg-black text-white hover:bg-black/80"
+              onClick={navigateToContact}
+            >
               Get in Touch
             </Button>
           </div>

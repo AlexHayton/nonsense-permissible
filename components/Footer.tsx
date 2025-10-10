@@ -1,8 +1,24 @@
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
 export default function Footer() {
-  const footerLinks = {
-    Company: ["About", "Work", "Careers", "Blog"],
-    Legal: ["Privacy", "Terms", "Cookies"],
-    Social: ["Twitter", "Dribbble", "Github", "LinkedIn"],
+  const footerLinks: { [key: string]: FooterLink[] } = {
+    Company: [
+      { label: "About", href: "#about" },
+      { label: "Work", href: "#work" },
+      { label: "Contact", href: "#contact" },
+    ],
+    Legal: [
+      { label: "Privacy", href: "#privacy" },
+      { label: "Terms", href: "#terms" },
+      { label: "Cookies", href: "#cookies" },
+    ],
+    Social: [
+      { label: "Github", href: "https://github.com/alexhayton" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/alexhayton/" },
+    ],
   };
 
   return (
@@ -10,16 +26,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Logo & Description */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-6 text-black/70 max-w-md">
             <img
               src="/nonsense.png"
               alt="Nonsense Permissible"
               className="h-16 w-auto"
             />
-            <p className="text-black/70 max-w-md">
-              Crafting delightful 3D toys and games for mobile platforms. Making
-              the impossible, permissible.
-            </p>
+            <p>Crafting experiences for web, mobile and XR platforms.</p>
+            <p>Making the impossible, permissible.</p>
           </div>
 
           {/* Links */}
@@ -27,13 +41,13 @@ export default function Footer() {
             <div key={category}>
               <h4 className="mb-4">{category}</h4>
               <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
+                {links.map((link: FooterLink) => (
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-black/70 hover:text-black transition-colors"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
