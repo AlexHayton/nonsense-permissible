@@ -6,14 +6,14 @@ interface FooterLink {
 export default function Footer() {
   const footerLinks: { [key: string]: FooterLink[] } = {
     Company: [
-      { label: 'About', href: '#about' },
-      { label: 'Work', href: '#work' },
-      { label: 'Contact', href: '#contact' },
+      { label: 'About', href: '/#about' },
+      { label: 'Work', href: '/#work' },
+      { label: 'Contact', href: '/#contact' },
     ],
     Legal: [
       { label: 'Privacy', href: '#privacy' },
       { label: 'Terms', href: '#terms' },
-      { label: 'Cookies', href: '#cookies' },
+      { label: 'Cookies', href: '/cookies' },
     ],
     Social: [
       { label: 'Github', href: 'https://github.com/alexhayton' },
