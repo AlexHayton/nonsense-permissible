@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Next.js 14 portfolio website deployed to Netlify. Built with TypeScript, React, and Tailwind CSS. The site is a single-page application with section-based navigation.
+Next.js 16 portfolio website deployed to Netlify. Built with TypeScript, React, and Tailwind CSS. The site is a single-page application with section-based navigation.
 
 ## House rules
 
