@@ -29,9 +29,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Local Netlify folder
-.netlify
-
 # Test results
 test-results/
 playwright-report/
