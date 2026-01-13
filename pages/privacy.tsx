@@ -21,14 +21,10 @@ export default function Privacy() {
               Information We Collect
             </h2>
             <p>
-              We may collect personal information that you voluntarily provide
-              to us when you:
+              We collect personal information that you voluntarily provide to us
+              when you contact us via email. This may include your name, email
+              address, and the contents of your message.
             </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Contact us via email or our contact form</li>
-              <li>Subscribe to our newsletter</li>
-              <li>Request information about our services</li>
-            </ul>
 
             <h2 className="text-2xl font-semibold text-black mt-8 mb-4">
               How We Use Your Information
@@ -52,6 +48,29 @@ export default function Privacy() {
               instruct your browser to refuse all cookies or to indicate when a
               cookie is being sent.
             </p>
+
+            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">
+              Subprocessors
+            </h2>
+            <p>
+              We use the following third-party service providers (subprocessors)
+              to process data on our behalf. These providers have access to your
+              data only to perform these tasks on our behalf and are obligated
+              not to disclose or use it for any other purpose.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                <strong>Netlify:</strong> We use Netlify for hosting and
+                infrastructure. They may process connection data, such as your
+                IP address, for security and performance monitoring.
+              </li>
+              <li>
+                <strong>Vercel:</strong> We use Vercel Analytics and Speed
+                Insights to analyze website traffic and performance. This helps
+                us understand how our website is used and improve the user
+                experience.
+              </li>
+            </ul>
 
             <h2 className="text-2xl font-semibold text-black mt-8 mb-4">
               Third-Party Services
