@@ -73,9 +73,12 @@ test.describe('Homepage Tests', () => {
     const projectCards = workSection
       .locator('div[class*="group"]')
       .filter({ hasText: 'View Project' });
-    await expect(projectCards).toHaveCount(3);
+    await expect(projectCards).toHaveCount(4);
 
     // Check specific projects
+    await expect(
+      workSection.locator('h3:has-text("Emoji Solver")')
+    ).toBeVisible();
     await expect(
       workSection.locator('h3:has-text("ValleyDAO Phlo")')
     ).toBeVisible();
@@ -180,8 +183,11 @@ test.describe('Homepage Tests', () => {
   test('should have working project links', async ({ page, context }) => {
     // Test ValleyDAO Phlo project link - only test the one that actually opens
     const phloPromise = context.waitForEvent('page');
-    await page.click('text=ValleyDAO Phlo');
-    await page.click('button:has-text("View Project")');
+
+    // Find the card containing "ValleyDAO Phlo" and click its button
+    const projectCard = page.locator('.group', { hasText: 'ValleyDAO Phlo' });
+    await projectCard.locator('button', { hasText: 'View Project' }).click();
+
     const phloPage = await phloPromise;
     await expect(phloPage.url()).toContain('phlo.valleydao.bio');
     await phloPage.close();
