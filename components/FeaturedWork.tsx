@@ -15,13 +15,22 @@ interface Project {
 export default function FeaturedWork() {
   const projects: Project[] = [
     {
+      title: 'Emoji Solver',
+      category: 'Web Game',
+      description:
+        'Decode the emoji message. Guess which emoji goes with which letter.',
+      image: '/emoji-solver/emoji-solver.png',
+      link: '#',
+      featured: true,
+    },
+    {
       title: 'ValleyDAO Phlo',
       category: 'AI Agent Development',
       description:
         'Connect with other researchers and founders in Climate Tech. Take a research idea, get funded, and turn it into a business.',
       image: '/phlo/phlo.jpg',
       link: 'https://phlo.valleydao.bio',
-      featured: true,
+      featured: false,
     },
     {
       title: 'Quest Alarm Clock',
