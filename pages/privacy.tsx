@@ -11,13 +11,18 @@ export default function Privacy() {
 
           <div className="prose max-w-none space-y-6 text-black/80">
             <p>
-              At Nonsense Permissible, we value your privacy and are committed to protecting your personal information.
-              This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website.
+              At Nonsense Permissible, we value your privacy and are committed
+              to protecting your personal information. This Privacy Policy
+              explains how we collect, use, and safeguard your data when you
+              visit our website.
             </p>
 
-            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">Information We Collect</h2>
+            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">
+              Information We Collect
+            </h2>
             <p>
-              We may collect personal information that you voluntarily provide to us when you:
+              We may collect personal information that you voluntarily provide
+              to us when you:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Contact us via email or our contact form</li>
@@ -25,31 +30,45 @@ export default function Privacy() {
               <li>Request information about our services</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">How We Use Your Information</h2>
-            <p>
-              We use the information we collect to:
-            </p>
+            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">
+              How We Use Your Information
+            </h2>
+            <p>We use the information we collect to:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Respond to your inquiries and provide customer support</li>
-              <li>Send you updates and marketing communications (if you have opted in)</li>
+              <li>
+                Send you updates and marketing communications (if you have opted
+                in)
+              </li>
               <li>Improve our website and services</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">Cookies and Tracking Technologies</h2>
+            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">
+              Cookies and Tracking Technologies
+            </h2>
             <p>
-              We use cookies and similar tracking technologies to track the activity on our service and hold certain information.
-              You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
+              We use cookies and similar tracking technologies to track the
+              activity on our service and hold certain information. You can
+              instruct your browser to refuse all cookies or to indicate when a
+              cookie is being sent.
             </p>
 
-            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">Third-Party Services</h2>
+            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">
+              Third-Party Services
+            </h2>
             <p>
-              We may employ third-party companies and individuals to facilitate our service, to provide the service on our behalf,
-              to perform service-related services, or to assist us in analyzing how our service is used.
+              We may employ third-party companies and individuals to facilitate
+              our service, to provide the service on our behalf, to perform
+              service-related services, or to assist us in analyzing how our
+              service is used.
             </p>
 
-            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">Contact Us</h2>
+            <h2 className="text-2xl font-semibold text-black mt-8 mb-4">
+              Contact Us
+            </h2>
             <p>
-              If you have any questions about this Privacy Policy, please contact us.
+              If you have any questions about this Privacy Policy, please
+              contact us.
             </p>
           </div>
         </div>
