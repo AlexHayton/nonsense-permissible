@@ -1,5 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { useCallback, useState } from 'react';
+import Image from 'next/image';
 import { Button } from './ui/button';
 
 export default function Navigation() {
@@ -18,9 +19,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center">
-            <img
+            <Image
               src={'/nonsense.png'}
               alt="Nonsense Permissible"
+              width={48}
+              height={48}
               className="h-12 w-auto"
             />
           </a>

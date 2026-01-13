@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useCallback } from 'react';
@@ -18,10 +19,13 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <img
+              <Image
                 src="/nonsense.png"
                 alt="Nonsense Permissible"
-                className="w-40"
+                width={160}
+                height={160}
+                className="w-40 h-auto"
+                priority
               />
               <div className="inline-block px-4 py-2 bg-black text-white text-sm">
                 Video . 3D . AI . WebRTC . Mobile . Web
@@ -57,7 +61,7 @@ export default function Hero() {
 
           {/* Right Image */}
           <div className="relative">
-            <div className="aspect-[4/5] w-full overflow-hidden bg-black/5">
+            <div className="aspect-[4/5] w-full overflow-hidden bg-black/5 relative">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1712173486904-5f149ee40dce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMDNkJTIwYWJzdHJhY3R8ZW58MXx8fHwxNzU5NTgzMjk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="3D Abstract Art"
