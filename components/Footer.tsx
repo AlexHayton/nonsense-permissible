@@ -11,7 +11,7 @@ export default function Footer() {
       { label: 'Contact', href: '#contact' },
     ],
     Legal: [
-      { label: 'Privacy', href: '#privacy' },
+      { label: 'Privacy', href: '/privacy' },
       { label: 'Terms', href: '#terms' },
       { label: 'Cookies', href: '#cookies' },
     ],
