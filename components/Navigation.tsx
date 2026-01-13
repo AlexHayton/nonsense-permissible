@@ -6,12 +6,13 @@ import { Button } from './ui/button';
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigateToContact = useCallback(() => {
-    window.location.href = '#contact';
+    window.location.href = '/#contact';
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Work', href: '#work' },
+    { name: 'About', href: '/#about' },
+    { name: 'Work', href: '/#work' },
+    { name: 'Cookies', href: '/cookies' },
   ];
 
   return (
