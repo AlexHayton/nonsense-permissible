@@ -60,9 +60,8 @@ export default function Privacy() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Netlify:</strong> We use Netlify for hosting and
-                infrastructure. They may process connection data, such as your
-                IP address, for security and performance monitoring.
+                <strong>Sentry:</strong> We use Sentry for error tracking and
+                monitoring to help us identify and fix issues with our website.
               </li>
               <li>
                 <strong>Vercel:</strong> We use Vercel Analytics and Speed
