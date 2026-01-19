@@ -73,7 +73,7 @@ test.describe('Homepage Tests', () => {
     const projectCards = workSection
       .locator('div[class*="group"]')
       .filter({ hasText: 'View Project' });
-    await expect(projectCards).toHaveCount(3);
+    await expect(projectCards).toHaveCount(4);
 
     // Check specific projects
     await expect(
@@ -84,6 +84,9 @@ test.describe('Homepage Tests', () => {
     ).toBeVisible();
     await expect(
       workSection.locator('h3:has-text("Video Dice")')
+    ).toBeVisible();
+    await expect(
+      workSection.locator('h3:has-text("Emopuz")')
     ).toBeVisible();
   });
 

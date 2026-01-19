@@ -41,6 +41,14 @@ export default function FeaturedWork() {
       link: '#',
       featured: false,
     },
+    {
+      title: 'Emopuz',
+      category: 'Web/Mobile App',
+      description: 'A web and mobile application.',
+      image: '/emopuz/icon.ico',
+      link: 'https://emopuz.com',
+      featured: false,
+    },
   ];
 
   const navigateToProject = useCallback((project: Project) => {
