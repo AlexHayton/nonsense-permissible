@@ -44,8 +44,9 @@ export default function FeaturedWork() {
     {
       title: 'Emopuz',
       category: 'Web/Mobile App',
-      description: 'A web and mobile application.',
-      image: '/emopuz/icon.ico',
+      description:
+        'Emopuz is officially live!\n\nCrack the code and guess the hidden phrase in this new logic word game.\n\n🥑 + 🏏 = ? Decode the daily message',
+      image: '/emopuz/feature.png',
       link: 'https://emopuz.com',
       featured: false,
     },
