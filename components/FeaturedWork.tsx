@@ -41,6 +41,15 @@ export default function FeaturedWork() {
       link: '#',
       featured: false,
     },
+    {
+      title: 'Emopuz',
+      category: 'Web/Mobile App',
+      description:
+        'Emopuz is officially live!\n\nCrack the code and guess the hidden phrase in this new logic word game.\n\n🥑 + 🏏 = ? Decode the daily message',
+      image: '/emopuz/feature.png',
+      link: 'https://emopuz.com',
+      featured: false,
+    },
   ];
 
   const navigateToProject = useCallback((project: Project) => {
