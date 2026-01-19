@@ -85,9 +85,7 @@ test.describe('Homepage Tests', () => {
     await expect(
       workSection.locator('h3:has-text("Video Dice")')
     ).toBeVisible();
-    await expect(
-      workSection.locator('h3:has-text("Emopuz")')
-    ).toBeVisible();
+    await expect(workSection.locator('h3:has-text("Emopuz")')).toBeVisible();
   });
 
   test('should display contact section', async ({ page }) => {
