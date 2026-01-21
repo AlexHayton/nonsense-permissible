@@ -70,39 +70,41 @@ export default function FeaturedWork() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card
+            <a
               key={index}
-              className={`group overflow-hidden border-2 border-black hover:shadow-xl transition-all duration-300 ${
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`block ${
                 project.featured && index === 0 ? 'lg:col-span-2' : ''
               }`}
             >
-              <div
-                className={`relative overflow-hidden ${
-                  project.featured ? 'aspect-[21/9]' : 'aspect-[4/3]'
-                }`}
-              >
-                <ImageWithFallback
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <div className="p-8">
-                <div className="text-sm mb-2 text-black/60">
-                  {project.category}
-                </div>
-                <h3 className="text-2xl mb-3">{project.title}</h3>
-                <p className="text-black/70 mb-4">{project.description}</p>
-                <button
-                  className="inline-flex items-center gap-2 group-hover:gap-3 transition-all"
-                  onClick={() => navigateToProject(project)}
+              <Card className="group overflow-hidden border-2 border-black hover:shadow-xl transition-all duration-300 h-full">
+                <div
+                  className={`relative overflow-hidden ${
+                    project.featured ? 'aspect-[21/9]' : 'aspect-[4/3]'
+                  }`}
                 >
-                  View Project
-                  <ArrowUpRight size={16} />
-                </button>
-              </div>
-            </Card>
+                  <ImageWithFallback
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-8">
+                  <div className="text-sm mb-2 text-black/60">
+                    {project.category}
+                  </div>
+                  <h3 className="text-2xl mb-3">{project.title}</h3>
+                  <p className="text-black/70 mb-4">{project.description}</p>
+                  <div className="inline-flex items-center gap-2 group-hover:gap-3 transition-all text-black font-medium">
+                    View Project
+                    <ArrowUpRight size={16} />
+                  </div>
+                </div>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
