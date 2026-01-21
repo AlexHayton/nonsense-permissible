@@ -179,13 +179,27 @@ test.describe('Homepage Tests', () => {
   });
 
   test('should have working project links', async ({ page, context }) => {
-    // Test ValleyDAO Phlo project link - only test the one that actually opens
+    // Test ValleyDAO Phlo project link
+    const phloCard = page.locator('.group', { hasText: 'ValleyDAO Phlo' });
+    const phloButton = phloCard.locator('button', { hasText: 'View Project' });
+
     const phloPromise = context.waitForEvent('page');
-    await page.click('text=ValleyDAO Phlo');
-    await page.click('button:has-text("View Project")');
+    await phloButton.click();
     const phloPage = await phloPromise;
     await expect(phloPage.url()).toContain('phlo.valleydao.bio');
     await phloPage.close();
+
+    // Test Emopuz project link
+    const emopuzCard = page.locator('.group', { hasText: 'Emopuz' });
+    const emopuzButton = emopuzCard.locator('button', { hasText: 'View Project' });
+
+    const emopuzPromise = context.waitForEvent('page');
+    await emopuzButton.click();
+    const emopuzPage = await emopuzPromise;
+    await expect(emopuzPage.url()).toBe(
+      'https://play.google.com/store/apps/details?id=com.alexnonsensepermissible.emojisolver'
+    );
+    await emopuzPage.close();
   });
 
   test('should be responsive on mobile', async ({ page }) => {

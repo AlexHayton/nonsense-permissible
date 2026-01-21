@@ -47,7 +47,7 @@ export default function FeaturedWork() {
       description:
         'Emopuz is officially live!\n\nCrack the code and guess the hidden phrase in this new logic word game.\n\n🥑 + 🏏 = ? Decode the daily message',
       image: '/emopuz/feature.png',
-      link: 'https://emopuz.com',
+      link: 'https://play.google.com/store/apps/details?id=com.alexnonsensepermissible.emojisolver',
       featured: false,
     },
   ];
