@@ -70,8 +70,9 @@ test.describe('Homepage Tests', () => {
     await expect(workSection.locator('h2')).toContainText('Featured Work');
 
     // Check projects are displayed - look for project cards more specifically
+    // Note: Structure changed so we look for the container which is now an anchor tag with a Card child
     const projectCards = workSection
-      .locator('div[class*="group"]')
+      .locator('a:has(.group)')
       .filter({ hasText: 'View Project' });
     await expect(projectCards).toHaveCount(4);
 
@@ -179,13 +180,26 @@ test.describe('Homepage Tests', () => {
   });
 
   test('should have working project links', async ({ page, context }) => {
-    // Test ValleyDAO Phlo project link - only test the one that actually opens
+    // Test ValleyDAO Phlo project link
+    // The link is now the parent anchor tag, but clicking the card content should work
+    const phloCard = page.locator('.group', { hasText: 'ValleyDAO Phlo' });
+
     const phloPromise = context.waitForEvent('page');
-    await page.click('text=ValleyDAO Phlo');
-    await page.click('button:has-text("View Project")');
+    await phloCard.click();
     const phloPage = await phloPromise;
     await expect(phloPage.url()).toContain('phlo.valleydao.bio');
     await phloPage.close();
+
+    // Test Emopuz project link
+    const emopuzCard = page.locator('.group', { hasText: 'Emopuz' });
+
+    const emopuzPromise = context.waitForEvent('page');
+    await emopuzCard.click();
+    const emopuzPage = await emopuzPromise;
+    await expect(emopuzPage.url()).toBe(
+      'https://play.google.com/store/apps/details?id=com.alexnonsensepermissible.emojisolver'
+    );
+    await emopuzPage.close();
   });
 
   test('should be responsive on mobile', async ({ page }) => {
