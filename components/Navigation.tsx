@@ -6,19 +6,19 @@ import { Button } from './ui/button';
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigateToContact = useCallback(() => {
-    window.location.href = '#contact';
+    window.location.href = '/#contact';
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Work', href: '#work' },
+    { name: 'About', href: '/#about' },
+    { name: 'Work', href: '/#work' },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center">
             <Image
               src={'/nonsense.png'}
               alt="Nonsense Permissible"
@@ -71,7 +71,10 @@ export default function Navigation() {
                   {item.name}
                 </a>
               ))}
-              <Button className="bg-black text-white hover:bg-black/80 w-full">
+              <Button
+                className="bg-black text-white hover:bg-black/80 w-full"
+                onClick={navigateToContact}
+              >
                 Get in Touch
               </Button>
             </div>
