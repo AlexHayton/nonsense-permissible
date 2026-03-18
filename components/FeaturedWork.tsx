@@ -33,15 +33,6 @@ export default function FeaturedWork() {
       featured: false,
     },
     {
-      title: 'Video Dice',
-      category: 'Fun',
-      description:
-        'Navigate through beautifully crafted 3D puzzle environments.',
-      image: '/video-dice/square.png',
-      link: '#',
-      featured: false,
-    },
-    {
       title: 'Emopuz',
       category: 'Web/Mobile App',
       description:
