@@ -19,8 +19,8 @@ test.describe('Homepage Tests', () => {
     await expect(logo).toBeVisible();
 
     // Check navigation links - these may be hidden on mobile
-    const aboutLink = nav.locator('a[href="#about"]');
-    const workLink = nav.locator('a[href="#work"]');
+    const aboutLink = nav.locator('a[href="/#about"]');
+    const workLink = nav.locator('a[href="/#work"]');
     const getInTouchButton = nav.locator('button:has-text("Get in Touch")');
 
     // At least one of these should be visible (desktop nav or mobile menu button)
@@ -109,7 +109,7 @@ test.describe('Homepage Tests', () => {
 
   test('should have working navigation links', async ({ page }) => {
     // Test About link - try desktop first, then mobile if needed
-    const aboutLink = page.locator('nav a[href="#about"]');
+    const aboutLink = page.locator('nav a[href="/#about"]');
     const mobileMenuButton = page.locator('button[aria-label="Toggle menu"]');
 
     if (await aboutLink.isVisible()) {
@@ -118,7 +118,7 @@ test.describe('Homepage Tests', () => {
       await expect(page.locator('#about')).toBeInViewport();
 
       // Test Work link
-      await page.click('nav a[href="#work"]');
+      await page.click('nav a[href="/#work"]');
       await expect(page.locator('#work')).toBeInViewport();
 
       // Test Get in Touch button
@@ -128,7 +128,7 @@ test.describe('Homepage Tests', () => {
       // Mobile navigation - open menu first
       await mobileMenuButton.click();
       const mobileMenuDropdown = page.locator('nav .md\\:hidden div').last();
-      await mobileMenuDropdown.locator('a[href="#about"]').click();
+      await mobileMenuDropdown.locator('a[href="/#about"]').click();
       await expect(page.locator('#about')).toBeInViewport();
     }
   });
@@ -145,13 +145,13 @@ test.describe('Homepage Tests', () => {
 
   test('should have working footer links', async ({ page }) => {
     // Test internal footer links
-    await page.click('footer a[href="#about"]');
+    await page.click('footer a[href="/#about"]');
     await expect(page.locator('#about')).toBeInViewport();
 
-    await page.click('footer a[href="#work"]');
+    await page.click('footer a[href="/#work"]');
     await expect(page.locator('#work')).toBeInViewport();
 
-    await page.click('footer a[href="#contact"]');
+    await page.click('footer a[href="/#contact"]');
     await expect(page.locator('#contact')).toBeInViewport();
   });
 
@@ -222,8 +222,8 @@ test.describe('Homepage Tests', () => {
     await expect(mobileMenuDropdown).toBeVisible();
 
     // Check mobile menu links
-    await expect(mobileMenuDropdown.locator('a[href="#about"]')).toBeVisible();
-    await expect(mobileMenuDropdown.locator('a[href="#work"]')).toBeVisible();
+    await expect(mobileMenuDropdown.locator('a[href="/#about"]')).toBeVisible();
+    await expect(mobileMenuDropdown.locator('a[href="/#work"]')).toBeVisible();
     await expect(
       mobileMenuDropdown.locator('button:has-text("Get in Touch")')
     ).toBeVisible();
@@ -237,7 +237,7 @@ test.describe('Homepage Tests', () => {
 
     // Click a link
     const mobileMenuDropdown = page.locator('nav .md\\:hidden div').last();
-    await mobileMenuDropdown.locator('a[href="#about"]').click();
+    await mobileMenuDropdown.locator('a[href="/#about"]').click();
 
     // Check mobile menu dropdown is closed
     await expect(mobileMenuDropdown).not.toBeVisible();
