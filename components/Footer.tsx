@@ -12,7 +12,7 @@ export default function Footer() {
     ],
     Legal: [
       { label: 'Privacy', href: '/privacy' },
-      { label: 'Terms', href: '/#terms' },
+      { label: 'Terms', href: '/terms' },
       { label: 'Cookies', href: '/#cookies' },
     ],
     Social: [
