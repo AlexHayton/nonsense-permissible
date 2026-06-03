@@ -10,9 +10,7 @@ export default function Terms() {
           <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
 
           <div className="prose max-w-none space-y-6 text-black/80">
-            <p>
-              [Placeholder for Terms of Service content]
-            </p>
+            <p>[Placeholder for Terms of Service content]</p>
           </div>
         </div>
       </main>
