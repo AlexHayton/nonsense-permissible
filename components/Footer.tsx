@@ -14,6 +14,7 @@ export default function Footer() {
       { label: 'Privacy', href: '/privacy' },
       { label: 'Terms', href: '/terms' },
       { label: 'Cookies', href: '/#cookies' },
+      { label: 'Delete Account', href: '/delete-your-user-account' },
     ],
     Social: [
       { label: 'Github', href: 'https://github.com/alexhayton' },
