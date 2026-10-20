@@ -74,7 +74,7 @@ test.describe('Homepage Tests', () => {
     const projectCards = workSection
       .locator('a:has(.group)')
       .filter({ hasText: 'View Project' });
-    await expect(projectCards).toHaveCount(3);
+    await expect(projectCards).toHaveCount(4);
 
     // Check specific projects
     await expect(
@@ -84,6 +84,9 @@ test.describe('Homepage Tests', () => {
       workSection.locator('h3:has-text("Quest Alarm Clock")')
     ).toBeVisible();
     await expect(workSection.locator('h3:has-text("Emopuz")')).toBeVisible();
+    await expect(
+      workSection.locator('h3:has-text("AV Drift Detector")')
+    ).toBeVisible();
   });
 
   test('should display contact section', async ({ page }) => {
@@ -197,6 +200,17 @@ test.describe('Homepage Tests', () => {
       'https://play.google.com/store/apps/details?id=com.alexnonsensepermissible.emojisolver'
     );
     await emopuzPage.close();
+
+    // Test AV Drift Detector project link
+    const avDriftCard = page.locator('.group', {
+      hasText: 'AV Drift Detector',
+    });
+
+    const avDriftPromise = context.waitForEvent('page');
+    await avDriftCard.click();
+    const avDriftPage = await avDriftPromise;
+    await expect(avDriftPage.url()).toContain('/av-drift-detector');
+    await avDriftPage.close();
   });
 
   test('should be responsive on mobile', async ({ page }) => {

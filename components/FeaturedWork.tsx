@@ -41,6 +41,15 @@ export default function FeaturedWork() {
       link: 'https://play.google.com/store/apps/details?id=com.alexnonsensepermissible.emojisolver',
       featured: false,
     },
+    {
+      title: 'AV Drift Detector',
+      category: 'AV Sync Testing',
+      description:
+        'Measure audio/video sync to a fraction of a millisecond, frame by frame.',
+      image: '/av-drift-detector/feature.png',
+      link: '/av-drift-detector',
+      featured: false,
+    },
   ];
 
   const navigateToProject = useCallback((project: Project) => {
