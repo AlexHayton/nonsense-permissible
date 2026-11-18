@@ -15,13 +15,22 @@ interface Project {
 export default function FeaturedWork() {
   const projects: Project[] = [
     {
+      title: 'Birdamp',
+      category: 'Web/Mobile App',
+      description:
+        'Turn up the bird. Tune down the noise. Open a video or recording, or record live, and Birdamp names the species and pulls its song out of the wind.',
+      image: '/birdamp/feature.jpg',
+      link: 'https://birdamp.app',
+      featured: true,
+    },
+    {
       title: 'ValleyDAO Phlo',
       category: 'AI Agent Development',
       description:
         'Connect with other researchers and founders in Climate Tech. Take a research idea, get funded, and turn it into a business.',
       image: '/phlo/phlo.jpg',
       link: 'https://phlo.valleydao.bio',
-      featured: true,
+      featured: false,
     },
     {
       title: 'Quest Alarm Clock',

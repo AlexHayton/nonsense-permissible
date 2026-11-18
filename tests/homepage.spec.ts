@@ -74,7 +74,7 @@ test.describe('Homepage Tests', () => {
     const projectCards = workSection
       .locator('a:has(.group)')
       .filter({ hasText: 'View Project' });
-    await expect(projectCards).toHaveCount(3);
+    await expect(projectCards).toHaveCount(4);
 
     // Check specific projects
     await expect(
@@ -83,6 +83,7 @@ test.describe('Homepage Tests', () => {
     await expect(
       workSection.locator('h3:has-text("Quest Alarm Clock")')
     ).toBeVisible();
+    await expect(workSection.locator('h3:has-text("Birdamp")')).toBeVisible();
     await expect(workSection.locator('h3:has-text("Emopuz")')).toBeVisible();
   });
 
@@ -186,6 +187,15 @@ test.describe('Homepage Tests', () => {
     const phloPage = await phloPromise;
     await expect(phloPage.url()).toContain('phlo.valleydao.bio');
     await phloPage.close();
+
+    // Test Birdamp project link
+    const birdampCard = page.locator('.group', { hasText: 'Birdamp' });
+
+    const birdampPromise = context.waitForEvent('page');
+    await birdampCard.click();
+    const birdampPage = await birdampPromise;
+    await expect(birdampPage.url()).toContain('birdamp.app');
+    await birdampPage.close();
 
     // Test Emopuz project link
     const emopuzCard = page.locator('.group', { hasText: 'Emopuz' });
